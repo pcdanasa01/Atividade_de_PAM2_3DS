@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade PAM</title>
+    
+</head>
+<body class="font-mono">
+    <main class="max-w-xl mx-auto mt-4 mb-14 px-4 xl:px-2">
+        <header>
+            <h1 class="text-3xl font-bold uppercase border-y border-black mx-2">
+                Atividade de PAM - 3DS
+            </h1>
+        </header>
+        <p class="border-x border-black mt-2 px-2 text-justify">
+            Soluções para os exercícios por Vitor G. Santos
+            e Samuel L. Miranda na matéria de Programação
+            de Aplicativos Mobile 2 no curso Desenvolvimento
+            de Sistemas. Lógica javascript escrita no arquivo
+            <em>logic.js</em>.
+        </p>
+        <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    1.
+                </span>
+                Alerta ao iniciar
+            </h2>
+            <p class="border-x border-black mt-2 px-2">
+                Mostrar um alerta com uma mensagem qualquer
+                ao abrir o website.
+            </p>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    2.
+                </span>
+                Alerta ao pressionar um botão
+            </h2>
+            <div class="border-x border-black mt-2 px-2">
+                <p>
+                    Mostrar um alerta com uma mensagem qualquer ao pressionar um botão
+                </p>
+                <input type="button" value="Aperte" onclick="exercise2()" class="cursor-pointer border hover:border-blue-200 active:border-blue-700 active: p-2">
+            </div>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    3.
+                </span>
+                Manipulação da DOM
+            </h2>
+            <div class="border-x border-black mt-2 px-2">
+                <p>
+                    Demonstrar e explicar meios de manipulação de elementos da DOM.
+                </p>
+
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            3.1.
+                        </span>
+                        getElementById()
+                    </h3>
+                    <p>
+                        Usado para retornar um objeto na DOM que possua o
+                        id especificado. Nesse exemplo, o quadrado verde
+                        possui um id, o qual será usado para adicionar
+                        uma borda em sua volta.
+                    </p>
+                    <div class="block" aria-label="grupo de quadrados">
+                        <div class="w-8 h-8 bg-red-300 inline-block" aria-label="quadrado vermelho"></div>
+                        <div id="square__31" class="w-8 h-8 bg-green-300 inline-block" aria-label="quadrado verde"></div>
+                        <div class="w-8 h-8 bg-blue-300 inline-block" aria-label="quadrado azul"></div>
+                    </div>
+                    <input type="button" value="testar" onclick="exercise3(1)" class="cursor-pointer border border-green-200 hover:border-green-500 active:border-green-800 p-2">
+                </section>
+
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            3.2.
+                        </span>
+                        getElementsByTagName()
+                    </h3>
+                    <p>
+                        Identifica e retorna uma coleção de elementos da DOM
+                        que possuam o nome da tag especificado. Nesse exemplo,
+                        essa função será usada para retornar as tags &lt;p&gt;
+                        presentes nesse documento e mostrar o seu número.
+                    </p>
+                    <p id="p__32" class="underline">
+                        Total de tags &lt;p&gt;: 0
+                    </p>
+                    <input type="button" value="testar" onclick="exercise3(2)" class="cursor-pointer border border-green-200 hover:border-green-500 active:border-green-800 p-2">
+                </section>
+
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            3.3.
+                        </span>
+                        getElementsByClassName()
+                    </h3>
+                    <p>
+                        Identifica e retorna uma coleção de elementos da DOM
+                        que possuam o nome da classe especificado. Como anteriormente,
+                        será utilizada para contar o número de elementos da DOM que
+                        possuem a classe <em>inline-block</em>.
+                    </p>
+                    <p id="p__33" class="underline">
+                        Total de elementos com 'inline-block': 0
+                    </p>
+                    <input type="button" value="testar" onclick="exercise3(3)" class="cursor-pointer border border-green-200 hover:border-green-500 active:border-green-800 p-2">
+                </section>
+
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            3.4.
+                        </span>
+                        querySelector()
+                    </h3>
+                    <p>
+                        Retorna o primeiro elemento que se enquadra com o seletor
+                        especificado. Dois dos quadrados abaixo possuem duas
+                        classes únicas, o qual apenas o primeiro elemento que a
+                        possui uma delas receberá uma borda.
+                    </p>
+                    <div class="block" aria-label="grupo de quadrados">
+                        <div class="square test w-8 h-8 bg-red-300 inline-block" aria-label="quadrado vermelho"></div>
+                        <div class="w-8 h-8 bg-green-300 inline-block" aria-label="quadrado verde"></div>
+                        <div class="square test w-8 h-8 bg-blue-300 inline-block" aria-label="quadrado azul"></div>
+                    </div>
+                    <input type="button" value="testar" onclick="exercise3(4)" class="cursor-pointer border border-green-200 hover:border-green-500 active:border-green-800 p-2">
+                </section>
+
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            3.5.
+                        </span>
+                        querySelectorAll()
+                    </h3>
+                    <p>
+                        Retorna todos os elementos que se enquadram no seletor
+                        especificado. Como no anterior, dois dos quadrados abaixo
+                        possuem duas classe únicas, com isso os quadrados que possuem
+                        uma das classes listados no seletor, teram uma borda.
+                    </p>
+                    <div class="block" aria-label="grupo de quadrados">
+                        <div class="square2 test2 w-8 h-8 bg-red-300 inline-block" aria-label="quadrado vermelho"></div>
+                        <div class="w-8 h-8 bg-green-300 inline-block" aria-label="quadrado verde"></div>
+                        <div class="test2 w-8 h-8 bg-blue-300 inline-block" aria-label="quadrado azul"></div>
+                    </div>
+                    <input type="button" value="testar" onclick="exercise3(5)" class="cursor-pointer border border-green-200 hover:border-green-500 active:border-green-800 p-2">
+                </section>
+            </div>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    4.
+                </span>
+                Eventos de ação
+            </h2>
+            <div class="border-x border-black mt-2 px-2">
+                <p>
+                    Demonstrar eventos de ação com elementos da DOM.
+                </p>
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            4.1.
+                        </span>
+                        onclick()
+                    </h3>
+                    <p onclick="exercise4(1)" id="p__41">
+                        Esse evento sofre um gatilho quando o objeto no qual
+                        ele está agindo é pressionado. Clique nesse texto para
+                        algo acontecer.
+                    </p>
+                </section>
+
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            4.2.
+                        </span>
+                        onmouseenter()
+                    </h3>
+                    <p onmouseenter="exercise4(2)" id="p__42">
+                        Esse evento sofre um gatilho quando o ponteiro do mouse
+                        entra na área do objeto em que ele está agindo.
+                        Coloque o mouse dentro da área do texto.
+                    </p>
+                </section>
+
+                <section class="mt-4">
+                    <h3 class="border-y border-zinc-500 border-dotted py-0.5">
+                        <span class="bg-zinc-500 text-white px-1 mr-1">
+                            4.3.
+                        </span>
+                        onmouseleave()
+                    </h3>
+                    <p onmouseleave="exercise4(3)" id="p__43">
+                        Esse evento sofre um gatilho quando o ponteiro
+                        do mouse sai do espaço do elemento em que ele
+                        está agindo. Coloque o mouse dentro da área do texto,
+                        e depois tire.
+                    </p>
+                </section>
+            </div>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    5.
+                </span>
+                Tipos de função
+            </h2>
+            <div class="border-x border-black mt-2 px-2">
+                <p>
+                    Criar exemplo dos diferentes tipos de funções. A solução
+                    para este está dentro do arquivo logic.js.
+                </p>
+            </div>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    6.
+                </span>
+                Botão contador
+            </h2>
+            <div class="border-x border-black mt-2 px-2">
+                <p>
+                    Incrementar um contador ao clicar em um botão.
+                </p>
+                <input id="button__6" type="button" value="Aperte" onclick="exercise6()" class="cursor-pointer border hover:border-blue-200 active:border-blue-700 active: p-2">
+            </div>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    7.
+                </span>
+                Converter para caixa alta
+            </h2>
+            <div class="border-x border-black mt-2 px-2">
+                <p>
+                    Converter uma string para caixa alta. Digite um texto e pressione enter
+                </p>
+                <input id="input__7" type="text" placeholder="Insira o texto" onchange="exercise7(document.getElementById('input__7'))" class="outline-none border p-2">
+            </div>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold uppercase border-y border-black mx-2">
+                <span class="bg-black text-white px-1 mr-1">
+                    8.
+                </span>
+                Somar dois números
+            </h2>
+            <div class="border-x border-black mt-2 px-2">
+                <p>
+                    Somar dois números e mostrar o resultado. Digite os números
+                    e clique no botão '='.
+                </p>
+                <input id="input__81" type="number" class="outline-none border w-24 p-2">
+                <input id="input__82" type="number" class="outline-none border w-24 p-2">
+                <input type="button" value="=" onclick="exercise8(document.getElementById('input__81'), document.getElementById('input__82'), document.getElementById('output__8'),)" class="cursor-pointer border border-blue-200 hover:border-blue-500 active:border-blue-800 p-2">
+                <input id="output__8" type="text" class="outline-none border w-24 p-2" readonly>
+            </div>
+            <div class="w-full h-8 mb-2 border-x border-dashed border-black"></div>
+        </section>
+    </main>
+
+    <script src="tailwind.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>
